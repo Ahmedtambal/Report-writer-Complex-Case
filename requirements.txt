@@ -1,0 +1,22 @@
+# Web application
+streamlit==1.32.0
+
+# Document processing
+python-docx==0.8.11
+docx2pdf==0.1.8
+pdfplumber==0.7.4
+
+# OCR and image processing
+pytesseract==0.3.10
+opencv-python-headless==4.9.0.80
+Pillow==10.1.0
+
+# Utility libraries
+python-dotenv==1.0.0
+numpy==1.26.4
+
+# OpenAI API
+openai>=0.27.0
+
+# Optional: DOCX conversion utility
+mammoth==1.5.1
