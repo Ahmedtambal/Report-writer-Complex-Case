@@ -1,6 +1,8 @@
 import json
 import streamlit as st
 import os
+import openai
+
 from logic import (
     create_new_document,
     save_uploaded_file,
@@ -24,7 +26,6 @@ from logic import (
     process_funds_for_comparison,
     generate_safe_withdrawal_rate_sections
 )
-import openai
 
 # Define folders for uploaded and generated documents
 UPLOAD_FOLDER = "uploaded_docs"
