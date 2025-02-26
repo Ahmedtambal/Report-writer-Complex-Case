@@ -281,10 +281,10 @@ def extract_client_details_with_gpt(factfinding_text):
     Analyze the provided FactFinding report and extract the following details to populate placeholders in a financial document:
 
     **Placeholders**:
-    - Full name: Combine Title and Surname
+    - Full name: Combine Title and Surname and if the fact finds is adreesed for two people combine both names like : Mr forename+Surname & Mrs Forename+Surname ; example "Mr James Yeandle & Mrs Elizabeth Yeandle". 
     - Address: Full multiline address with postal code
     - Today's date: Current date in "9th January 2025" format
-    - Salutation: "Dear [Forename]," format
+    - Salutation: "Dear [Forename]," format and if it is for two people use "Dear [Forename] & [Forename]," format.
 
     **FactFinding Report**:
     {factfinding_text}
@@ -341,6 +341,8 @@ def generate_current_situation(factfinding_text):
    - 3.Use British terminology:
         - Use "flat" instead of "apartment", "lift" instead of "elevator", and "petrol" instead of "gasoline".
         - Use "holiday" instead of "vacation" and "autumn" instead of "fall".    
+    - If the report is for one individual, use singular language (e.g., "Chris, you are 68 years....","You have...", "Your pension is...").
+    - If the report is for two individuals, use plural or joint language (e.g., "Tony, you are 74 years old, and Liz, you are 75 years old.... ", "You both have...", "Your combined pensions are...").       
     - Write the section in professional bullet points, but keep it conversational by using "You" at the beginning of some sentences.
     - Make sure to mention the part about include monthly growth and monthly expenditure and remain in one line for example (• You have a monthly gross income of £2,700.00 and a monthly expenditure of £1,670.00, leaving you with a monthly surplus of £1,030.00.).
     - Include point about dependants and Wife details and their financial details if they are found.
@@ -424,6 +426,8 @@ def generate_priorities_and_objectives(factfinding_text):
     - 3.Use British terminology:
         - Use "flat" instead of "apartment", "lift" instead of "elevator", and "petrol" instead of "gasoline".
         - Use "holiday" instead of "vacation" and "autumn" instead of "fall".   
+    - If the report is for one individual, use singular language (e.g., "You have...", "Your pension is...").
+    - If the report is for two individuals, use plural or joint language (e.g., "You both have...", "Your combined pensions are...").   
     - Focus on the client's primary and secondary financial objectives, integrating personal context to make it highly personalized.
     - Use a professional tone and structure, with clear and specific details.
     - Avoid unnecessary repetition or vague language.
