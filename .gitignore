@@ -1,0 +1,10 @@
+# Ignore streamlit configuration folder
+.streamlit/
+
+# Ignore Python cache folders
+__pycache__/
+_pycache_/
+
+# Ignore compiled Python files
+*.py[cod]
+*$py.class
